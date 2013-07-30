@@ -1,5 +1,5 @@
-## Kentucky Digital Library
-### Metadata Guidelines
+#### Kentucky Digital Library
+##### Metadata Guidelines
 ---
 7.30.13 / Nabil Kashyap
 
@@ -7,7 +7,7 @@ These guidelines describe the descriptive metadata fields used in the Kentucky D
 
 This repository contains all the tools for a sample implementation of such document. A single, version-controlled markdown document can be used to generate a web-based document, snippets of HTML suitable for reuse in other contexts and a static PDF.
 
-#### Ingredients:
+##### Ingredients:
 - markdown document with a set of metadata guidelines for contributors
 - php library for parsing markdown into html
 - bootstrap framework (for convenience)
