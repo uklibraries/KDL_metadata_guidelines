@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/md_web_style.css" rel="stylesheet" media="all">
   </head>
   <body>
 
     <div class="col-lg-8 col-offset-2">
 
     <?php     
-    include_once 'Michelf/Markdown.php';
-    include_once 'Michelf/MarkdownExtra.php';
+    include_once 'php-markdown-lib/Markdown.php';
+    include_once 'php-markdown-lib/MarkdownExtra.php';
     use \Michelf\Markdown;
     use \Michelf\MarkdownExtra;
     $out = nl2br(file_get_contents('md_guidelines.md'));

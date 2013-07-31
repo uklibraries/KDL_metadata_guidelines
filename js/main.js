@@ -28,10 +28,9 @@ $.markdownCollapse = function() {
 
 	$('h4').replaceWith(function(i,val){
 
-		return '<div><h4><a>+ ' + titles[i] + '</h4></div>';
+		return '<div class="accordion-heading"><h4><a>+ ' + this.innerHTML + '</h4></div>';
 
 	});
-
 
 	$('h4 > a').addClass('accordion-toggle')
 		.attr('data-toggle', 'collapse')
