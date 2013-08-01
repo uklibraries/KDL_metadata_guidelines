@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KDL Metadata Guidelines</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/md_web_style.css" rel="stylesheet" media="all">
+  </head>
+  <body>
+
+    <div class="row">
+
+    <div class="col-lg-8 col-offset-2">
+
+    <h1>Kentucky Digital Library Metadata Guidelines <img src="kdl_logo.png" alt="KDL logo" /><br /></h1>
+
+<p><br />
+Update June 2013<br /></p>
+
+<hr/>
+
+<p><br />
+<br />
+[TOC]<br />
+<a href="#title">title</a><br />
+<a href="#data-fields">data fields</a><br />
+<br />
+<br /></p>
+
+<h2>1 Introduction<br /></h2>
+
+<p><br /></p>
+
+<blockquote>
+  <p><em>The Kentucky Digital Library (KDL) is built to enhance scholarship, research and lifelong learning through the establishment of access to shared digital archival collections in the state of Kentucky. It also provides guidance and instruction for Kentucky libraries, archives, historical societies and museums on applying appropriate technologies used in the production of digital library resources.</em><br />
+  </blockquote><br />
+  - from the mission statement<br />
+  <br />
+  The Kentucky Digital Library is a statewide resource whose infrastructure is managed by the University of Kentucky's Digital Library Services. KDL also serves as regional hub for the Digital Public Library of America. These guidelines are intended to support the aim of providing technological guidance to the diversity of participating cultural heritage institutions whose unique collections comprise the KDL. In turn, well-formed and consistent metadata will support effective long-term preservation, enhance discovery and improve interoperability. Ultimately, good metadata helps users by making sure Kentucky's digitized cultural heritage collections are accessible and searchable, now and in the future.<br />
+  <br /></p>
+</blockquote>
+
+<h6>Specifically, these guidelines are designed to:<br /></h6>
+
+<ul>
+<li>cover basic metadata principles and best practices<br /></li>
+<li>increase transparency by describing KDL's workflows and processes regarding metadata<br /></li>
+<li>provide specifications and practical examples for descriptive metadata fields<br /></li>
+<li>facilitate effective reuse of existing descriptions already created by contributors, such as cataloging records and finding aids <br />
+<br /></li>
+</ul>
+
+<h3>1.1 Metadata Overview<br /></h3>
+
+<p><br />
+Robust models for describing digital objects categorize metadata as either descriptive, administrative and structural. While useful, these categories can overlap in several areas if they are not further defined. KDL generates much of the administrative and structural metadata describing objects and collections through automated processes. On the other hand, KDL believes contributors know their own collections best, and KDL depends on them to provide descriptive metadata that will best facilitate discovery. At the same time, contributed metadata should adhere to best practices where at all possible in order to make the most of KDL's existing infrastructure and any systems that rely on KDL's data, such as the Digital Public Library of America (DPLA).<br />
+<br />
+These guidelines are designed in the effort to balance the diversity of descriptions associated with contributed collections and the technical needs of systems that rely on KDL data, such as the DPLA. In practice, KDL largely consists of material contributed by special collections and archives and has made every effort to incorporate aspects of standards appropriate to those collections, especially Describing Archives: A Content Standard (DACS) and Encoded Archival Description (EAD). KDL recognizes three levels of "required-ness" across descriptive metadata fields -- required, required if available and recommended. It also includes recommended fields specific to collection level records that make best use of existing finding aids.<br />
+<br /></p>
+
+<h6><strong>Required fields must be submitted in order for content to be ingested:</strong><br /></h6>
+
+<ul>
+<li>format<br /></li>
+<li>Kentucky-specific subject<br /></li>
+<li>language<br /></li>
+<li>resource type<br /></li>
+<li>rights<br /></li>
+<li>title<br />
+<br /></li>
+</ul>
+
+<h6><strong>Required if available</strong><br /></h6>
+
+<ul>
+<li>creator<br /></li>
+<li>date<br /></li>
+<li>source<br />
+<br /></li>
+</ul>
+
+<h6><strong>Recommended</strong><br /></h6>
+
+<p><br />
+KDL describes a number of additional fields that map to common description and cataloging standards. We highly recommend that contributors submit all fields appropriate to existing descriptive metadata that may have previously been collected in finding aid, accession record or catalog record by contributing institution.<br />
+<br />
+<strong>Collection level</strong><br />
+<br />
+KDL provides a number of recommended fields specific to collection level records in order to capture information contained in finding aids that may not be appropriate for item level records.<br />
+<br /></p>
+
+<h3>1.2 Clarifications <br /></h3>
+
+<p><br />
+<strong>Items and Collections</strong><br />
+<br />
+There are two types of records that may be entered: those that describe individual items and those that describe collections of items. Fields that only pertain to collections appear in the recommended fields section and generally include information that would appear in a finding aid.<br />
+<br />
+<strong>Source Material</strong><br />
+<br />
+In the case of digitized collections as opposed to born-digital materials, the metadata fields as they are construed here privilege the source material. While the fields descriptions in the following section should make that explicit, occasionally ambiguity may arise, in which case contributors should opt for descriptions of the original source material.<br />
+<br />
+<strong>Character Encoding</strong><br />
+<br />
+KDL encodes metadata records using UTF-8 character encoding, which supports a range of foreign characters. We encourage contributors to adhere as closely to information as it appears on the original record, for example, including accented characters in the title of records or the names of contributors.<br />
+<br />
+<strong>Dates</strong><br />
+<br />
+To enhance discoverability and automated maintenance processes, KDL requires the use of ISO 8601 for the entry of the most date fields; in other words, KDL uses the standard form of YYYY-MM-DD. This is used in Date, Terminal Date, Date Range Start and Date Range End fields.<br />
+<br />
+Dates appear in other fields as well, and we encourage the strict use of the same format where applicable. In practice, this will usually be to indicate a year (YYYY) or range of years (YYYY-YYYY). A question mark(?) to indicate uncertainty and a tilde(~) to indicate an approximate date can be placed immediately before a year (~1800-?1900). <br />
+<br />
+While free text dates may appear in many fields, they most commonly appear in Creator, Contributor, Temporal Coverage, Collection Label, Series Statement and Bulk Date fields<br />
+<br />
+<strong>Authority Lists and Controlled Vocabulary</strong><br />
+<br />
+Wherever possible we encourage authority lists and controlled vocabulary over free text submission in order to enhance discoverability and interoperability. In addition to Library of Congress Authorities and the Getty Art and Architecture Thesaurus, KDL maintains a number of subsets specific to Kentucky related collections. In the case of Kentucky-specific subsets of broader standards, options will appear in drop down menus in the metadata editor.<br />
+<br /></p>
+
+<h2>2 Data Fields {#data-fields}<br /></h2>
+
+<p><br /></p>
+
+<h3>2.1 How to Use this Manual<br /></h3>
+
+<p><br /></p>
+
+<h6>Descriptive metadata fields submitted by contributors appear below with the following fields:<br /></h6>
+
+<ul>
+<li><strong>Title /</strong> human-readable title of the field<br /></li>
+<li><strong>Repeatable /</strong> whether the field can be used multiple times or whether it is unique to an item<br /></li>
+<li><strong>Scheme /</strong> how data should be inputted, whether entering free  unstructured text or entering values according to an authority list<br /></li>
+<li><strong>Qualifier /</strong> whether qualifiers are available to distinguish field elements<br /></li>
+<li><strong>Definition /</strong> a succinct definition of the field's intended use, largely taken from Dublin Core guidelines but further specified for use by KDL<br /></li>
+<li><strong>Usage Guidelines /</strong> notes on how to use the field and issues that may come up in practice<br /></li>
+<li><strong>Examples /</strong> examples taken from the KDL of successful fields<br /></li>
+<li><strong>Resources /</strong> links to external resources relevant to the field<br />
+</ul><br />
+Note that crosswalks for each field appear in Appendix A.<br />
+<br /></li>
+</ul>
+
+<h3>2.2 Required Fields<br /></h3>
+
+<p><br /></p>
+
+<h4>Account Information<br /></h4>
+
+<p><br />
+In addition to descriptive metadata fields, KDL requires repositories to provide basic account information in order to facilitate contributors editing metadata and uploading content.<br />
+<br />
+The required information for repository accounts are:<br />
+<br />
+<strong>Abstract:</strong> A succinct description of the contributing repository to appear online alongside contributed materials<br />
+<br />
+<strong>Department:</strong> The name of the institutional department in custody of the collections published online<br />
+<br />
+<em>Institutional Contact Information to appear alongside online collections</em><br />
+<strong>Street Address:</strong> Physical location of the contributed collections<br />
+<strong>Email:</strong> An institutional email address for the repository for directing reference requests and other collection-specific queries<br />
+<strong>URL:</strong> A stable web address linking to the contributing institution<br />
+<br />
+<em>Depositor Contact Information for internal use should KDL need to contact the person responsible for contributing material</em><br />
+<strong>Depositor name</strong><br />
+<strong>Depositor email address</strong><br />
+<br /></p>
+
+<h4>Format<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> AAT<br />
+<br />
+<strong>Definition:</strong> The file format or physical medium of the present resource<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- When using the metadata editor, Format choices will appear as options in a selectable drop down menu. <br />
+- KDL uses a custom subset of Getty AAT. See Resources below.<br />
+- In the case of digitized resources, Format refers to the analog source.<br />
+<br />
+<strong>Examples:</strong> Books, Diaries, [mixed materials]<br />
+<br />
+<strong>Resources:</strong><br />
+<br />
+<a href="http://www.uky.edu/~eweig/kdl_metadata_2013/kdl_metadata_2013_dcmiformat.xsd">KDL Format Authority List</a><br />
+<br />
+<a href="http://www.getty.edu/research/tools/vocabularies/aat/index.html">Getty AAT</a><br />
+<br /></p>
+
+<h4>Kentucky-Specific Subject<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> KDL Kentucky Subject Headings<br />
+<br />
+<strong>Definition:</strong> Topic headings related to Kentucky history that describe the intellectual content of the resource<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- Select Kentucky specific topic(s) as indicated on KDL's Kentucky subject headings list. <br />
+- If using the metadata editor, these options appear in a drop down list.<br />
+ <br />
+<strong>Examples:</strong> African American history, Appalachia, Coal Mining<br />
+<br />
+<strong>Resources:</strong><br />
+<br />
+<a href="http://www.uky.edu/~eweig/kdl_metadata_2013/kdl_metadata_2013_dcmisubject.xsd">KDL Kentucky Subject Headings</a><br />
+<br /></p>
+
+<h4>Language<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> ISO 639<br />
+<br />
+<strong>Definition:</strong> The language of the intellectual content of the present resource<br />
+<br />
+<strong>Usage Guidelines:</strong> <br />
+- When using the metadata editor, Language choices will appear as options in a selectable drop down menu.<br />
+- The Language should be indicated by the two-letter code where available or the three-letter code, if the two-letter is unavailable.<br />
+<br />
+<strong>Examples:</strong> en, es<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639</a><br />
+<br /></p>
+
+<h4>Resource Type<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> DCMI Type Vocabulary<br />
+<br />
+<strong>Definition:</strong> The functions, genres or aggregation levels for the content of the resource<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- When using the metadata editor, Resource Type choices will appear as options in a selectable drop down menu.<br />
+- The Resource Type corresponds to those described by the Dublin Core Type Vocabulary.<br />
+ <br />
+<strong>Examples:</strong> Collection, Text, StillImage<br />
+<br />
+<strong>Resources:</strong><br />
+<a href="http://dublincore.org/documents/dcmi-type-vocabulary/#H7">DCMI Type Vocabulary</a><br />
+<br /></p>
+
+<h4>Rights<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> Free text<br />
+<br />
+<strong>Definition:</strong> An identifier that links to a rights management statement or to a service providing information about rights management<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- Contributors can include a statement and/or a URL appropriate to that institution's policies.<br />
+- If no institution-specific rights statement is included, KDL's default rights statement will be used.<br />
+<br />
+<strong>Examples:</strong> <br />
+<br />
+Default / This digital resource may be freely searched and displayed. Permission must be received for subsequent distribution in print or electronically.  Physical rights are retained by the owning repository. Copyright is retained in accordance with U. S. copyright laws. Please go to http://kdl.kyvl.org for more information.<br />
+<br /></p>
+
+<h4>Title<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> Free text<br />
+<br />
+<strong>Qualifier(s):</strong> Alternate<br />
+<br />
+<strong>Definition:</strong> An identifying and/or descriptive name given to the resource<br />
+<br />
+<strong>Usage Guidelines:</strong> <br />
+- Input the title exactly as it appears as it appears, including punctuation and foreign characters.<br />
+- The title should be the name by which the resource is formally known, typically given by the creator.<br />
+- If no title exists, please provide a succint description of the resource, if possible constructed according to DACS. Only use "Untitled" in cases where that is the designated title. <br />
+- If more than one title exists, additional title fields should be designated by the qualifier "alternate".<br />
+<br />
+<strong>Examples:</strong><br />
+<br />
+Formal / "Why Blood Flows in Harlan," The Literary Digest, December 5, 1931<br />
+<br />
+Supplied / Group portrait of Elmendorf students, with teacher Ella Ford, standing in front of school located off Paris Pike.<br />
+<br />
+<strong>Resources:</strong> <br />
+<br />
+<a href="http://files.archivists.org/pubs/DACS2E-2013.pdf">Describing Archives: A Content Standard</a><br />
+<br /></p>
+
+<h3>2.3 Required If Available<br /></h3>
+
+<p><br /></p>
+
+<h4>Creator<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> LC Name Authority Headings (recommended), Free text<br />
+<br />
+<strong>Definition:</strong> The person, agency or organization primarily responsible for creating the intellectual content of the resource<br />
+<br />
+<strong>Usage Guidelines:</strong> <br />
+- In the case of an individual, begin with the creator's last name followed by the first, separated by a comma.<br />
+- In case of ambiguity, include the name exactly as it appears in the resource.<br />
+- Include birth and death dates where applicable.<br />
+- In the case of corporate entities, use the name exactly as it appears in the resource.<br />
+- Wherever possible, use the form of names as they appear in the Library of Congress Name Authority Headings.<br />
+<br />
+<strong>Examples:</strong> <br />
+<br />
+Individual Creator / Brezing, Belle, 1860-1940<br />
+<br />
+Corporate Creator / University of Kentucky. College of Agriculture. Agricultural Experiment Station<br />
+<br />
+<strong>Resources:</strong> <a href="http://authorities.loc.gov/">Library of Congress Name Authority Headings</a><br />
+<br /></p>
+
+<h4>Date<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> ISO 8601 (YYYY-MM-DD)<br />
+<br />
+<strong>Definition:</strong> The date when the the present resource was created, or in the case of digitized objects, when the analog source was created<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- When using the metadata editor, this field will be entered using the drop down calendar.<br />
+- When only a year is available, please format the date [year]-01-01.<br />
+- When an item is described by a date span, please enter the earliest date. <br />
+- Items require a single date in order to facilitate effective, faceted search across digital collections, which may give rise to ambiguity. Other date fields that appear under Recommended Fields can be used to further describe items.<br />
+<br />
+<strong>Examples:</strong> 1848-01-01<br />
+<br />
+<strong>Resources:</strong><br />
+<a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a><br />
+<br /></p>
+
+<h4>Source<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> No<br />
+<br />
+<strong>Scheme:</strong> A formal identifier (recommended), Free text<br />
+<br />
+<strong>Definition:</strong> An unambiguous reference to the resource from which the present resource is derived<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- In practice, the source is often the title for the collection of which the present resource is a member.<br />
+- The source may also be a formal identifier (e.g., URI, ISBN, ISSN or accession number).<br />
+- The source is not applicable to most born-digital objects, that is, objects that are not derivatives of other resources. <br />
+<br />
+<strong>Examples:</strong> <br />
+<br />
+Collection title / Herndon J. Evans Collection<br />
+<br />
+Formal / ISBN: 0613685725, Accession Number: 2009MS189<br />
+<br /></p>
+
+<h3>2.4 Recommended<br /></h3>
+
+<p><br /></p>
+
+<h4>Collection Label<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> No<br />
+<br />
+<strong>Scheme:</strong> Free text<br />
+<br />
+<strong>Definition:</strong> The human-readable label for the collection of which the resource is a part. <br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- This field is provided as a convenience to contributing repositories to allow users to identify an item as part of a collection especially when a formal identifier such as an accession number or ISBN is unavailable.<br />
+- Use the title of the collection as it appears within internal catalog of the contributing repository.<br />
+<br />
+<strong>Examples:</strong> Abraham Haptonstall Legal Documents, 1788-1806, Abe Thompson photograph album<br />
+<br /></p>
+
+<h4>Collection Level Relation <br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> No<br />
+<br />
+<strong>Scheme:</strong> URI (recommended), ARK identifier, Accession number, Free text<br />
+ <br />
+<strong>Definition:</strong> A formal string identifier for another resource such as collection or item to which the present resource is related<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- This field is intended to provide a way of indicating a machine readable reference to another resource, specifically that it is part of a collection.<br />
+- When using the metadata editor, options appear in a drop down menu based on the collection level records submitted for the contributing repository.<br />
+<br />
+<strong>Examples:</strong> ark:/xt7ht727b08t, Accession Number: 1984ua004<br />
+<br />
+<strong>Resources:</strong><br />
+<br />
+<a href="http://purl.org/dc/terms/isPartOf">Dublin Core Terms: isPartOf</a><br />
+<br /></p>
+
+<h4>Container 1 <br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> No<br />
+<br />
+<strong>Scheme:</strong> Controlled vocabulary, Integer identifier<br />
+<br />
+<strong>Definition:</strong> The highest level container of a collection's physical arrangement and its sequential number<br />
+<br />
+<strong>Usage Guidelines:</strong> <br />
+- This field allows item level records to indicate a physical location within the contributing institution's holdings.<br />
+- When using the metadata editor, options appear in a drop down menu.<br />
+- The optional fields Container 2 and Container 3 describe nested containers, further specifying the physical location of source records.<br />
+- This field can facilitate the construction of an EAD record from descriptive metadata.<br />
+<br />
+<strong>Examples:</strong> Box 1, Carton 3, Drawer 6<br />
+<br />
+<strong>Resources:</strong><br />
+<br />
+<a href="http://www.loc.gov/ead/tglib/element_index.html">Encoded Archival Description</a><br />
+<br /></p>
+
+<h4>Container 2 <br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> No<br />
+<br />
+<strong>Scheme:</strong> Controlled vocabulary, Integer identifier<br />
+<br />
+<strong>Definition:</strong> The second highest level container of a collection's physical arrangement and its sequential number<br />
+<br />
+<strong>Usage Guidelines:</strong> <em>Please see Usage Guidelines for Container 1.</em><br />
+<br />
+<strong>Examples:</strong> Folder 2, Case 3 <br />
+<br /></p>
+
+<h4>Container 3 <br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> No<br />
+<br />
+<strong>Scheme:</strong> Controlled vocabulary, Integer identifier<br />
+<br />
+<strong>Definition:</strong> The third highest level container of a collection's physical arrangement and its sequential number<br />
+<br />
+<strong>Usage Guidelines:</strong> <em>Please see Usage Guidelines for Container 1.</em><br />
+<br />
+<strong>Examples:</strong> Item 5<br />
+<br /></p>
+
+<h4>Contributor<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> LC Name Authority Headings (recommended), Free text<br />
+<br />
+<strong>Definition:</strong> The person, agency or organization that contributed significantly or played an important role in creating the intellectual content of the resource other than the creator<br />
+<br />
+<strong>Usage Guidelines:</strong> <br />
+- In the case of an individual, begin with the creator's last name followed by the first, separated by a comma.<br />
+- In case of ambiguity, include the name exactly as it appears in the resource.<br />
+- Include birth and death dates where applicable.<br />
+- In the case of corporate entities, use the name exactly as it appears in the resource.<br />
+- Wherever possible, use the form of names as they appear in the Library of Congress Name Authority Headings.<br />
+<br />
+<strong>Examples:</strong> <br />
+<br />
+Individual Contributor / Brezing, Belle, 1860-1940<br />
+<br />
+Corporate Contributor / University of Kentucky. College of Agriculture. Agricultural Experiment Station<br />
+<br />
+<strong>Resources:</strong> <a href="http://authorities.loc.gov/">Library of Congress Name Authority Headings</a><br />
+<br /></p>
+
+<h4>Description <br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> Free text<br />
+<br />
+<strong>Definition:</strong> An account of the physical or intellectual properties of the present resource<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- This field allows contributors to include a succinct, relevant summary or abstract that will aid search and discovery of the present resource.<br />
+- The resources below link to content standards that describe appropriate structures for descriptive and summative notes. <br />
+<br />
+<strong>Examples:</strong> <br />
+<br />
+<strong>Resources:</strong><br />
+<br />
+<a href="http://www.loc.gov/ead/tglib/element_index.html">Encoded Archival Description</a><br />
+<br />
+<a href="http://files.archivists.org/pubs/DACS2E-2013.pdf">Describing Archives: A Content Standard</a><br />
+<br /></p>
+
+<h4>File Format<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> Controlled vocabulary<br />
+<br />
+<strong>Definition:</strong> The file format of the present digital resource<br />
+<br />
+<strong>Usage Guidelines:</strong> When using the metadata editor, this field will be entered using the drop down list of file formats based on IANA.<br />
+<br />
+<strong>Examples:</strong><br />
+<br />
+<strong>Resources:</strong><br />
+<br />
+<a href="http://www.uky.edu/~eweig/kdl_metadata_2013/kdl_metadata_2013_fileformat.xsd">KDL File Formats</a><br />
+<br />
+<a href="http://www.iana.org/assignments/media-types">Internet Assigned Numbers Authority (IANA)</a><br />
+<br /></p>
+
+<h4>Geographic Coverage <br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> Controlled vocabulary<br />
+<br />
+<strong>Definition:</strong> Kentucky specific place names relevant to the intellectual content of the present resource<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- Choose relevant geographic locations from the subset list of LCSH subject headings referring to Kentucky's political boundaries.<br />
+- When using the metadata editor, options appear in a drop down menu.<br />
+<br />
+<strong>Examples:</strong> World -- North and Central America -- United States -- Kentucky -- Lexington<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.uky.edu/~eweig/kdl_metadata_2013/kdl_metadata_2013_dcmicoverage.xsd">KDL Kentucky Place Names</a><br />
+<br /></p>
+
+<h4>LCSH Subject<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> LCSH, TGM I, TGM II, Free text<br />
+<br />
+<strong>Definition:</strong> The subjects, topics or keywords describing the intellectual content of the resource<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- In practice, descriptive metadata fields can be used as subjects. The values entered for Creator, Contributor, Spatial Coverage and/or Date Range can also be entered as values for the Subject field.<br />
+- Where appropriate, include subjects from the following authority lists: LCSH, TGM I and TGM II. Ideally, these subject strings can be reused from existing records such as finding aids or MARC records.<br />
+ <br />
+<strong>Examples:</strong> <br />
+<br />
+Creator as subject / <br />
+Brezing, Belle, 1860-1940<br />
+<br />
+University of Kentucky. College of Agriculture. Agricultural Experiment Station<br />
+<br />
+LCSH / Botany--Kentucky--Lexington<br />
+<br />
+Entomology--Kentucky--Lexington<br />
+<br />
+<strong>Resources:</strong><br />
+<br />
+<a href="http://authorities.loc.gov/">Library of Congress Subject Authority Headings (LCSH)</a><br />
+<br />
+<a href="http://www.loc.gov/rr/print/tgm1/">Thesaurus for Graphic Materials I (TGM I)</a><br />
+<br />
+<a href="http://www.loc.gov/rr/print/tgm2/">Thesaurus for Graphic Materials II (TGM II)</a><br />
+<br /></p>
+
+<h4>Publisher<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> Free text<br />
+<br />
+<strong>Definition:</strong> Name of the person or organization responsible for making the resource available<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- The publisher may be a formal publishing house or agency, as in the case of a book or newspaper.<br />
+- The publisher may also be a corporate entity, for example, the name of the university department, professional association or company.<br />
+ <br />
+<strong>Examples:</strong> Harper Collins, University of Kentucky College of Agriculture, The McClatchy Company<br />
+<br />
+<strong>Resources:</strong><br />
+<br />
+<a href="http://purl.org/dc/elements/1.1/publisher">Dublin Core: Publisher</a><br />
+<br /></p>
+
+<h4>Relation<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> URI (recommended), ARK identifier, Accession number, ISBN<br />
+<br />
+<strong>Qualifier(s):</strong> Is Version Of, Has Version, Is Replaced By, Replaces, Is Required By, Requires, Is Part Of, Has Part, Is Referenced By, References, Is Format Of, Has Format <br />
+<br />
+<strong>Definition:</strong> A formal string identifier for another resource such as collection or item to which the present resource is related<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- This field is intended to provide a way of indicating a machine readable reference to another resource.<br />
+- Requires the use of a Dublin Core Relation qualifier to specify the relationship between the resources.<br />
+<br />
+<strong>Examples:</strong> isPartOf: ark:/xt7ht727b08t, isVersionOf: ISBN 0613685725<br />
+<br />
+<strong>Resources:</strong><br />
+<br />
+<a href="http://purl.org/dc/terms/relation">Dublin Core Terms: Relation</a><br />
+<br /></p>
+
+<h4>Retention <br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> No<br />
+<br />
+<strong>Scheme:</strong> Controlled vocabulary<br />
+<br />
+<strong>Definition:</strong> Either Temporal or Preservation -- whether the resource is intended to be preserved or whether there is a terminal date at which point it should be deaccessioned<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- KDL's preservation infrastructure involves different maintenance routines depending on whether a record is intended for preservation or for temporary storage <br />
+- If using the metadata editor, choose preservation or temporal from the drop down menu.<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.uky.edu/~eweig/kdl_metadata_2013/kdl_metadata_2013_retention.xsd">KDL Retention Schedule List</a><br />
+<br /></p>
+
+<h4>Series Statement <br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> No<br />
+<br />
+<strong>Scheme:</strong> Free text<br />
+<br />
+<strong>Definition:</strong> A label designating the intellectual series of an archival collection as indicated by its finding aid to which the present belongs<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- Enter the series title exactly as it appears within the contributing institutions internal catalog.<br />
+- This field enhances discoverability by providing intellectual context to item level records.<br />
+<br />
+<strong>Examples:</strong> Correspondence, Financial documents, Ephemera<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/seriesstmt.html">EAD&lt;series&#62;</a><br />
+<br /></p>
+
+<h4>Spatial Coverage<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> Yes<br />
+<br />
+<strong>Scheme:</strong> WGS 84<br />
+<br />
+<strong>Definition:</strong> Geospatial coordinates relevant to the intellectual content of the present resource<br />
+<br />
+<strong>Usage Guidelines:</strong> Latitude and longitudinal coordinates should describe the most specific geographic location available in order to best make use of spatial information.<br />
+<br />
+<strong>Resources:</strong> World Geodetic System (WGS 84)<br />
+<br /></p>
+
+<h4>Terminal Date<br /></h4>
+
+<p><br />
+<strong>Repeatable:</strong> No<br />
+<br />
+<strong>Scheme:</strong> ISO 8601 (YYYY-MM-DD)<br />
+<br />
+<strong>Definition:</strong> The calendar date after which a digital record is intended to be deaccessioned<br />
+<br />
+<strong>Usage Guidelines:</strong><br />
+- If temporal was chosen for the retention option, a drop down calendar will appear for when the resource should no longer be preserved.<br />
+<br />
+<strong>Resources:</strong> [ISO 8601](<a href="http://www.w3.org/TR/NOTE-datetime">ISO 8601</a><br />
+<br /></p>
+
+<h3>2.3 Collection Level Fields<br /></h3>
+
+<p><br />
+The following fields refer to finding aid specific descriptive information at the collection level. The fields are largely derived from the best practices described by <a href="http://files.archivists.org/pubs/DACS2E-2013.pdf">DACS</a> and <a href="http://www.loc.gov/ead/tglib/element_index.html">EAD</a>. Where indicated, the following definitions are summarized from the Encoded Archival Description Tag Library, 2002.<br />
+<br /></p>
+
+<h4>Abstract<br /></h4>
+
+<p><br />
+A very brief summary of the materials being described, used primarily to encode bits of biographical or historical information about the creator and abridged statements about the scope, content, arrangement, or other descriptive details about the archival unit or one of its components.<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/abstract.html">EAD &lt;abstract&#62;</a><br />
+<br /></p>
+
+<h4>Accruals<br /></h4>
+
+<p><br />
+Information about anticipated additions to the materials being described. Can indicate quantity and frequency. Can also be used to indicate that no additions are expected.<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/accruals.html">EAD &lt;accruals&#62;</a><br />
+<br /></p>
+
+<h4>Arrangement<br /></h4>
+
+<p><br />
+Information on how the described materials have been subdivided into smaller units, e.g., record groups into series, identifying the logical or physical groupings within a hierarchical structure.<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/arrangement.html">EAD &lt;arrangement&#62;</a><br />
+<br /></p>
+
+<h4>Biography or History<br /></h4>
+
+<p><br />
+A concise essay or chronology that places the archival materials in context by providing information about their creator(s). <br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/bioghist.html">EAD &lt;bioghist&#62;</a><br />
+<br /></p>
+
+<h4>Bulk Date<br /></h4>
+
+<p><br />
+The date or dates describing the predominant date range during which records in a collection were created. This is useful when there is a significant discrepancy between the earliest or latest records and the bulk of record creation.<br />
+<br />
+This date is entered as free text and can be a date (YYYY-MM-DD), a year (YYYY) or span of years (YYYY-YYYY).<br />
+<br /></p>
+
+<h4>Conditions Governing Reproduction and Use<br /></h4>
+
+<p><br />
+Information about conditions that affect the availability of the materials being described.<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/accessrestrict.html">EAD &lt;accessrestrict&#62;</a><br />
+<br /></p>
+
+<h4>Custodial History<br /></h4>
+
+<p><br />
+Information about the chain of ownership of the materials being described, before they reached the immediate source of acquisition.<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/custodhist.html">EAD &lt;custodhist&#62;</a><br />
+<br /></p>
+
+<h4>Date Range Start and Date Range End<br /></h4>
+
+<p><br />
+The date of the earliest record's creation and the latest record's creation. As with other dates, these should take the form of YYYY-MM-DD according to ISO 8601.<br />
+<br /></p>
+
+<h4>Extent<br /></h4>
+
+<p><br />
+Information about the quantity of the materials being described or an expression of the physical space they occupy. In practice, this usually involves traditional archival units of measurement such as linear or cubic feet, boxes, cartons or cases. It may also include the number of individual items, such as photographs or film reels.<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/extent.html">EAD &lt;extent&#62;</a><br />
+<br /></p>
+
+<h4>Note<br /></h4>
+
+<p><br />
+A short statement explaining the text, indicating the basis for an assertion, or citing the source of a quotation or other information. Used both for general comments and as an annotation for the text in a finding aid. Should not be used in cases where a more specific tag would suffice. <br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/note.html">EAD &lt;note&#62;</a><br />
+<br /></p>
+
+<h4>Physical Access<br /></h4>
+
+<p><br />
+Information identifying the place where the described materials are stored, such as the name or number of the building, room, stack, shelf, or other tangible area.<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/physloc.html">EAD &lt;physloc&#62;</a><br />
+<br /></p>
+
+<h4>Scope and Content Note<br /></h4>
+
+<p><br />
+A prose statement summarizing the range and topical coverage of the described materials, often mentioning the form and arrangement of the materials and naming significant organizations, individuals, events, places, and subjects represented. <br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/scopecontent.html">EAD &lt;scopecontent&#62;</a><br />
+<br /></p>
+
+<h4>Source of Acquisition<br /></h4>
+
+<p><br />
+The immediate source of the materials being described and the circumstances under which they were received. Includes donations, transfers, purchases, and deposits.<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/acqinfo.html">EAD &lt;acqinfo&#62;</a><br />
+<br /></p>
+
+<h4>Technical Access<br /></h4>
+
+<p><br />
+A description of important physical conditions or characteristics that affect the storage, preservation, or use of the materials described.<br />
+<br />
+<strong>Resources:</strong> <a href="http://www.loc.gov/ead/tglib/elements/phystech.html">EAD &lt;phystech&#62;</a><br />
+<br /></p>
+
+<h2>Appendix A: Ingest Processes Overview<br /></h2>
+
+<p><br />
+Once a project is actively being processed, digital objects undergo a number of steps so that when files are later retrieved KDL can ensure they are complete and have not been unintentionally modified. KDL models its system after the Open Archives Initiatives System (OAIS) which, roughly speaking, divides preservation into three stages: submission, archiving and dissemination. At each stage, a packet of information including metadata and data files is generated and passed onto the next for further processing.<br />
+<br />
+Metadata is actually served as JSON files that can later be reassembled according to whatever structure is necessary. This facilitiates reuse by multiple systems because no rigid structure is implied. For example, metadata can be recombined and structured to meet different requirements, such as DPLA's metadata harvester or a DACS compliant EAD.<br />
+<br />
+<strong>1 Submission</strong><br />
+<br />
+Data files, paired with basic descriptive information such as format, are put into an ingest queue, something like a bulletin board listing upcoming projects.<br />
+<br />
+<strong>2 SIP</strong><br />
+<br />
+The first stage of processing is creating a Submission Information Packet (SIP). Files are copied into a workspace and associated with appropriate administrative and structural metadata. Files might be further processed, for example, images of printed text might be scanned using Optical Text Recognition (OCR). <br />
+<br />
+<strong>3 Identifiers</strong><br />
+<br />
+The data, metadata and any derivative files are then packaged and given unique identifiers. The Archival Information Packet(AIP) identifier will accompany the package of information that will be archived and stored without being accessed. The Dissemination Information Packet(DIP) identifier will accompany the package of information that will be stored on the server accessed by KDL's online interface.<br />
+<br />
+<strong>4 Approval</strong><br />
+<br />
+Before being archived or moved to access storage, packages undergo testing to make sure that files and metadata are complete.<br />
+<br />
+<strong>5 Storage</strong><br />
+<br />
+Lastly, packages are moved to their appropriate servers and a version of the metadata is added to KDL's index. Archival packages are secure within a preservation repository and dissemination packages are now searchable online. Any temporary files are cleaned up and the process can begin again.   <br />
+<br /></p>
+
+<h2>Appendix B: Crosswalks<br /></h2>
+
+<p><br />
+<br /></p>
+
+<table dir='ltr' border=0 cellpadding=0 cellspacing=0 class='tblGenFixed' id='tblMain'><tr class='rShim'><td class='rShim' style='width:0;'><td class='rShim' style='width:174px;'><td class='rShim' style='width:120px;'><td class='rShim' style='width:120px;'><td class='rShim' style='width:120px;'><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s0'>Field Title<td  dir='ltr' class='s1'>DC<td  dir='ltr' class='s1'>EAD<td  dir='ltr' class='s1'>MARC</tr><tr dir='ltr'><td class=hd></td><td  class='s2'><td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s3'>required fields<td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>format<td  dir='ltr' class='s5'>dc:format<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>Kentucky-specific subject<td  dir='ltr' class='s5'>dc:subject<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>language<td  dir='ltr' class='s5'>dc:language<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>resoure type<td  dir='ltr' class='s5'>dcterms:type<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>rights<td  dir='ltr' class='s5'>dc:rights<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>title<td  dir='ltr' class='s5'>dc:title<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  class='s2'><td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s3'>required if available<td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>creator<td  dir='ltr' class='s5'>dc:creator<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>date<td  dir='ltr' class='s5'>dc:date<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>source<td  dir='ltr' class='s5'>dc:source<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  class='s2'><td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s3'>recommended<td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>collection label<td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>collection level relation<td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>container 1<td ><td  dir='ltr' class='s5'>c01<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>container 2<td ><td  dir='ltr' class='s5'>c02<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>container 3<td ><td  dir='ltr' class='s5'>c03<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>contributor<td  dir='ltr' class='s5'>dc:contributor<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>description<td  dir='ltr' class='s5'>dc:description<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>file format<td  dir='ltr' class='s5'>dc:format<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>geographic coverage<td  dir='ltr' class='s5'>dc:subject<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>LCSH subject<td  dir='ltr' class='s5'>dc:subject<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>publisher<td  dir='ltr' class='s5'>dc:publisher<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>relation<td  dir='ltr' class='s5'>dc:relation<td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>retention<td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>series statement<td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>spatial coverage<td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>terminal date<td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  class='s2'><td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s3'>collection level<td ><td ><td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>abstract<td  dir='ltr' class='s5'>dcterms:abstract<td  dir='ltr' class='s5'>abstract<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>accruals<td ><td  dir='ltr' class='s5'>accruals<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>arrangement<td ><td  dir='ltr' class='s5'>arrangment<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>biography or history<td  dir='ltr' class='s5'>dc:description<td  dir='ltr' class='s5'>bioghist<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>bulk date<td ><td  dir='ltr' class='s5'>date<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>conditions governing reproduction and access<td ><td  dir='ltr' class='s5'>accessrestrict<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>custodial history<td ><td  dir='ltr' class='s5'>custodhist<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>date range end<td  dir='ltr' class='s5'>dcterms:temporal<td  dir='ltr' class='s5'>date<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>date range start<td  dir='ltr' class='s5'>dcterms:temporal<td  dir='ltr' class='s5'>date<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>extent<td  dir='ltr' class='s5'>dcterms:extent<td  dir='ltr' class='s5'>extent<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>note<td  dir='ltr' class='s5'>dc:description<td  dir='ltr' class='s5'>note<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>physical access<td  dir='ltr' class='s5'>dc:description<td  dir='ltr' class='s5'>physloc<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>scope and content note<td  dir='ltr' class='s5'>dc:description<td  dir='ltr' class='s5'>scopecontent<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>source of acquisition<td  dir='ltr' class='s5'>dc:description<td  dir='ltr' class='s5'>acqinfo<td ></tr><tr dir='ltr'><td class=hd></td><td  dir='ltr' class='s4'>technical access<td  dir='ltr' class='s5'>dc:description<td  dir='ltr' class='s5'>phystech<td ></tr></table>
+
+    </div>
+
+    </div>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Optionally enable responsive features in IE8 -->
+    <script src="js/respond.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

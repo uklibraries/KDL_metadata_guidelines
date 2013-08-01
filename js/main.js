@@ -3,7 +3,7 @@
 *				<コ:彡
 
 *	digital library services / university of kentucky
-	meta data guidelines
+	markdown to bootstrap-friendly table of contents and accordion-friendly markup 
 * 	License: MIT
 
 * 	(c) 2013
@@ -15,15 +15,14 @@
 
 $.markdownCollapse = function() {
 
-	var elements = $('h4');
 	var titles = [];
-	var classLabels = []
+	var fieldIDs = [];
 
-	$.each(elements, function() {
-		var title = this.innerHTML.slice(0,-4);
+	$.each($('h4'), function(k,v) {
+		var title = $(v).text();
 		titles.push(title);
 		var label = title.split(' ').join('-').toLowerCase();
-		classLabels.push(label);
+		fieldIDs.push(label);
 	})
 
 	$('h4').replaceWith(function(i,val){
@@ -34,7 +33,8 @@ $.markdownCollapse = function() {
 
 	$('h4 > a').addClass('accordion-toggle')
 		.attr('data-toggle', 'collapse')
-		.attr('href', function(i,val){ return '#' + classLabels[i]; });
+		.attr('id', function(i,val){ return fieldIDs[i]; })
+		.attr('href', function(i,val){ return '#collapse-' + fieldIDs[i]; });
 
 	$('div + p').replaceWith(function(i,val){
 
@@ -43,7 +43,23 @@ $.markdownCollapse = function() {
 	});
 
 	$('div.accordion-body').addClass('collapse')
-		.attr('id', function(i,val){ return classLabels[i]; });
+		.attr('id', function(i,val){ return 'collapse-' + fieldIDs[i]; });
+		
+	$.each($('h2,h3'), function(k,v){
+		
+		var text = $(v).text();
+
+		var re = new RegExp('\\d\.\\d\\s|\\d\\s');		
+		var elementID = text.toLowerCase().trim();
+		elementID = elementID.replace(/\d\.\d|\d\s|\:|\+/,'').trim();
+		elementID = elementID.replace(/\s/g,'-');
+		$(v).attr('id', elementID);
+		$('ul.sidenav').append('<li><a>');
+		$('ul.sidenav li a').last()
+			.attr('href', '#' + elementID)
+			.html(text);
+
+	});		
 
 }
 
