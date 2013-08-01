@@ -16,11 +16,12 @@
 body { 
 
 	background-color: #ddd;
-	font-size: 20px;
+	font-size: 17px;
 	font-weight: 300;
+	font-family: 'Georgia', 'Times', 'Times New Roman', serif;
 }
 
-.col-lg-8 {
+.col-lg-9 {
 
 	background-color: #fff; 
 	padding: 30px;
@@ -69,7 +70,13 @@ div.accordion-heading h4 {
 	border-radius: 3px;
 }
 
-a:hover { color: #226631; }
+a:hover, li.active a { color: #226631; }
+
+li.active a {
+
+	font-size: 103%;
+	background-color: #ddd;
+}
 
 p { color: #555; }
 
@@ -89,3 +96,18 @@ ul li{
 margin-bottom: 5px;
 }
 
+.sidenav {
+	padding: 5px 0px;
+	margin-top: 10px;
+	background-color: #fff;
+	width: 85%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+table td{
+
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+	padding: 5px;
+}
