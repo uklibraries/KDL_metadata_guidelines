@@ -1,5 +1,4 @@
-#### Kentucky Digital Library
-##### Metadata Guidelines
+#### Kentucky Digital Library Metadata Guidelines
 ---
 7.13 / Nabil Kashyap (nabilk.com) / Digital Library Services / University of Kentucky
 
@@ -7,7 +6,9 @@ These guidelines describe the descriptive metadata fields used in the Kentucky D
 
 This repository contains all the tools for a sample implementation of such a document. A single, version-controlled markdown document can be used to generate a web-based document, snippets of HTML suitable for reuse in other contexts and a static PDF.
 
-#### Notes
+The [crosswalk table](https://docs.google.com/spreadsheet/ccc?key=0AqAqvqKN28wbdENCUm84RVNhekFHN0FqQXR1TWEzWkE&usp=sharing) is unfortunately not complete but can be edited here. 
+
+##### Notes
 - Webpage generation: View a test [here](http://www.nabilk.com/KDL_metadata_guidelines/) I used a php library, a custom css stylesheet (lib/md_web_style.css) and a small js file. Several Ruby Gems can accomplish something similar for easier integration into the Blacklight 4 framework if need be -- in particular [Redcarpet](https://github.com/vmg/redcarpet) and [Kramdown](http://kramdown.rubyforge.org/parser/kramdown.html). The css and js files may need to modified according to small inconsistencies in parsing markdown.
 - Static PDF: I used Mou, a markdown editor for OSX plus a modified css file (lib/md_pdf_style.css) to export the pdf. For Windows, [MarkdownPad](http://markdownpad.com/) provides similar functionality. Again, the css might need modification to account for parsing differences
 
@@ -15,4 +16,5 @@ This repository contains all the tools for a sample implementation of such a doc
 - metadata guidelines markdown document
 - [php-markdown-lib](http://michelf.com/projects/php-markdown/), a php library for parsing markdown into html by Michel Fortin
 - Twitter Bootstrap Framework (for convenience)
-- JavaScript file for integrating parsed markdown with Bootstrap / jQuery collapse plugin
+- JavaScript file for integrating parsed markdown with Bootstrap / jQuery collapse plugin and generating table of contents
+- stylesheets for generating a web page and a pdf.
