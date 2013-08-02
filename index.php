@@ -43,7 +43,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Optionally enable responsive features in IE8 -->
-    <script src="js/respond.js"></script>
+    <script src="js/respond.min.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">  $('#sidenav').scrollspy(); </script>
   </body>
