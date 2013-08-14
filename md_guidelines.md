@@ -563,7 +563,7 @@ Entomology--Kentucky--Lexington
 
 **Resources:** [ISO 8601]([ISO 8601](http://www.w3.org/TR/NOTE-datetime)
 
-### 2.3 Collection Level Fields
+### 2.5 Collection Level Fields
 
 The following fields refer to finding aid specific descriptive information at the collection level. The fields are largely derived from the best practices described by [DACS](http://files.archivists.org/pubs/DACS2E-2013.pdf) and [EAD](http://www.loc.gov/ead/tglib/element_index.html). Where indicated, the following definitions are summarized from the Encoded Archival Description Tag Library, 2002.
 
