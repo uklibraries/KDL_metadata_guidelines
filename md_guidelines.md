@@ -481,7 +481,7 @@ Entomology--Kentucky--Lexington
 **Usage Guidelines:**
 - If temporal was chosen for the retention option, a drop down calendar will appear for when the resource should no longer be preserved.
 
-**Resources:** [ISO 8601]([ISO 8601](http://www.w3.org/TR/NOTE-datetime)
+**Resources:** [ISO 8601](http://www.w3.org/TR/NOTE-datetime)
 
 ### 2.5 Collection Level Fields
 
