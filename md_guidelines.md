@@ -1,6 +1,6 @@
 # Kentucky Digital Library Metadata Guidelines ![KDL logo](kdl_logo.png)
 
-Update June 2013
+Updated August 2013
 <hr/>
 
 ## 1 Introduction
@@ -109,7 +109,7 @@ The required information for repository accounts are:
 
 #### Format
 
-**Repeatable:** Yes
+**Repeatable:** No
 
 **Scheme:** AAT
 
@@ -127,24 +127,6 @@ The required information for repository accounts are:
 [KDL Format Authority List](http://www.uky.edu/~eweig/kdl_metadata_2013/kdl_metadata_2013_dcmiformat.xsd)
 
 [Getty AAT](http://www.getty.edu/research/tools/vocabularies/aat/index.html)
-
-#### Kentucky-Specific Subject
-
-**Repeatable:** Yes
-
-**Scheme:** KDL Kentucky Subject Headings
-
-**Definition:** Topic headings related to Kentucky history that describe the intellectual content of the resource
-
-**Usage Guidelines:**
-- Select Kentucky specific topic(s) as indicated on KDL's Kentucky subject headings list. 
-- If using the metadata editor, these options appear in a drop down list.
- 
-**Examples:** African American history, Appalachia, Coal Mining
-
-**Resources:**
-
-[KDL Kentucky Subject Headings](http://www.uky.edu/~eweig/kdl_metadata_2013/kdl_metadata_2013_dcmisubject.xsd)
 
 #### Language
 
@@ -164,7 +146,7 @@ The required information for repository accounts are:
 
 #### Resource Type
 
-**Repeatable:** Yes
+**Repeatable:** No
 
 **Scheme:** DCMI Type Vocabulary
 
@@ -181,7 +163,7 @@ The required information for repository accounts are:
 
 #### Rights
 
-**Repeatable:** Yes
+**Repeatable:** No
 
 **Scheme:** Free text
 
@@ -197,7 +179,7 @@ Default / This digital resource may be freely searched and displayed. Permission
 
 #### Title
 
-**Repeatable:** Yes
+**Repeatable:** No
 
 **Scheme:** Free text
 
@@ -248,7 +230,7 @@ Corporate Creator / University of Kentucky. College of Agriculture. Agricultural
 
 #### Date
 
-**Repeatable:** Yes
+**Repeatable:** No
 
 **Scheme:** ISO 8601 (YYYY-MM-DD)
 
@@ -264,6 +246,24 @@ Corporate Creator / University of Kentucky. College of Agriculture. Agricultural
 
 **Resources:**
 [ISO 8601](http://www.w3.org/TR/NOTE-datetime)
+
+#### Kentucky Topic
+
+**Repeatable:** Yes
+
+**Scheme:** KDL Kentucky Subject Headings
+
+**Definition:** Topic headings related to Kentucky history that describe the intellectual content of the resource
+
+**Usage Guidelines:**
+- Select Kentucky specific topic(s) as indicated on KDL's Kentucky subject headings list. 
+- If using the metadata editor, these options appear in a drop down list.
+ 
+**Examples:** African American history, Appalachia, Coal Mining
+
+**Resources:**
+
+[KDL Kentucky Subject Headings](http://www.uky.edu/~eweig/kdl_metadata_2013/kdl_metadata_2013_dcmisubject.xsd)
 
 #### Source
 
@@ -286,81 +286,23 @@ Formal / ISBN: 0613685725, Accession Number: 2009MS189
 
 ### 2.4 Recommended
 
-#### Collection Label
+#### Container List
 
 **Repeatable:** No
 
-**Scheme:** Free text
+**Scheme:** Controlled vocabulary, Free text
 
-**Definition:** The human-readable label for the collection of which the resource is a part. 
-
-**Usage Guidelines:**
-- This field is provided as a convenience to contributing repositories to allow users to identify an item as part of a collection especially when a formal identifier such as an accession number or ISBN is unavailable.
-- Use the title of the collection as it appears within internal catalog of the contributing repository.
-
-**Examples:** Abraham Haptonstall Legal Documents, 1788-1806, Abe Thompson photograph album
-
-#### Collection Level Relation 
-
-**Repeatable:** No
-
-**Scheme:** URI (recommended), ARK identifier, Accession number, Free text
- 
-**Definition:** A formal string identifier for another resource such as collection or item to which the present resource is related
-
-**Usage Guidelines:**
-- This field is intended to provide a way of indicating a machine readable reference to another resource, specifically that it is part of a collection.
-- When using the metadata editor, options appear in a drop down menu based on the collection level records submitted for the contributing repository.
-
-**Examples:** ark:/xt7ht727b08t, Accession Number: 1984ua004
-
-**Resources:**
-
-[Dublin Core Terms: isPartOf](http://purl.org/dc/terms/isPartOf)
-
-#### Container 1 
-
-**Repeatable:** No
-
-**Scheme:** Controlled vocabulary, Integer identifier
-
-**Definition:** The highest level container of a collection's physical arrangement and its sequential number
+**Definition:** A list of up to three containers (with identifiers) indicating an item's physical arrangment within a collection.
 
 **Usage Guidelines:** 
 - This field allows item level records to indicate a physical location within the contributing institution's holdings.
-- When using the metadata editor, options appear in a drop down menu.
-- The optional fields Container 2 and Container 3 describe nested containers, further specifying the physical location of source records.
 - This field can facilitate the construction of an EAD record from descriptive metadata.
 
-**Examples:** Box 1, Carton 3, Drawer 6
+**Example:** Box 1, Carton 3, Drawer 6
 
 **Resources:**
 
 [Encoded Archival Description](http://www.loc.gov/ead/tglib/element_index.html)
-
-#### Container 2 
-
-**Repeatable:** No
-
-**Scheme:** Controlled vocabulary, Integer identifier
-
-**Definition:** The second highest level container of a collection's physical arrangement and its sequential number
-
-**Usage Guidelines:** *Please see Usage Guidelines for Container 1.*
-
-**Examples:** Folder 2, Case 3 
-
-#### Container 3 
-
-**Repeatable:** No
-
-**Scheme:** Controlled vocabulary, Integer identifier
-
-**Definition:** The third highest level container of a collection's physical arrangement and its sequential number
-
-**Usage Guidelines:** *Please see Usage Guidelines for Container 1.*
-
-**Examples:** Item 5
 
 #### Contributor
 
@@ -387,7 +329,7 @@ Corporate Contributor / University of Kentucky. College of Agriculture. Agricult
 
 #### Description 
 
-**Repeatable:** Yes
+**Repeatable:** No
 
 **Scheme:** Free text
 
@@ -404,24 +346,6 @@ Corporate Contributor / University of Kentucky. College of Agriculture. Agricult
 [Encoded Archival Description](http://www.loc.gov/ead/tglib/element_index.html)
 
 [Describing Archives: A Content Standard](http://files.archivists.org/pubs/DACS2E-2013.pdf)
-
-#### File Format
-
-**Repeatable:** Yes
-
-**Scheme:** Controlled vocabulary
-
-**Definition:** The file format of the present digital resource
-
-**Usage Guidelines:** When using the metadata editor, this field will be entered using the drop down list of file formats based on IANA.
-
-**Examples:**
-
-**Resources:**
-
-[KDL File Formats](http://www.uky.edu/~eweig/kdl_metadata_2013/kdl_metadata_2013_fileformat.xsd)
-
-[Internet Assigned Numbers Authority (IANA)](http://www.iana.org/assignments/media-types)
 
 #### Geographic Coverage 
 
@@ -443,7 +367,7 @@ Corporate Contributor / University of Kentucky. College of Agriculture. Agricult
 
 **Repeatable:** Yes
 
-**Scheme:** LCSH, TGM I, TGM II, Free text
+**Scheme:** LCSH
 
 **Definition:** The subjects, topics or keywords describing the intellectual content of the resource
 
@@ -466,13 +390,9 @@ Entomology--Kentucky--Lexington
 
 [Library of Congress Subject Authority Headings (LCSH)](http://authorities.loc.gov/)
 
-[Thesaurus for Graphic Materials I (TGM I)](http://www.loc.gov/rr/print/tgm1/)
-
-[Thesaurus for Graphic Materials II (TGM II)](http://www.loc.gov/rr/print/tgm2/)
-
 #### Publisher
 
-**Repeatable:** Yes
+**Repeatable:** No
 
 **Scheme:** Free text
 
@@ -596,6 +516,38 @@ A concise essay or chronology that places the archival materials in context by p
 The date or dates describing the predominant date range during which records in a collection were created. This is useful when there is a significant discrepancy between the earliest or latest records and the bulk of record creation.
 
 This date is entered as free text and can be a date (YYYY-MM-DD), a year (YYYY) or span of years (YYYY-YYYY).
+
+#### Collection Label
+
+**Repeatable:** No
+
+**Scheme:** Free text
+
+**Definition:** The human-readable label for the collection of which the resource is a part. 
+
+**Usage Guidelines:**
+- This field is provided as a convenience to contributing repositories to allow users to identify an item as part of a collection especially when a formal identifier such as an accession number or ISBN is unavailable.
+- Use the title of the collection as it appears within internal catalog of the contributing repository.
+
+**Examples:** Abraham Haptonstall Legal Documents, 1788-1806, Abe Thompson photograph album
+
+#### Collection Level Relation 
+
+**Repeatable:** No
+
+**Scheme:** URI (recommended), ARK identifier, Accession number, Free text
+ 
+**Definition:** A formal string identifier for another resource such as collection or item to which the present resource is related
+
+**Usage Guidelines:**
+- This field is intended to provide a way of indicating a machine readable reference to another resource, specifically that it is part of a collection.
+- When using the metadata editor, options appear in a drop down menu based on the collection level records submitted for the contributing repository.
+
+**Examples:** ark:/xt7ht727b08t, Accession Number: 1984ua004
+
+**Resources:**
+
+[Dublin Core Terms: isPartOf](http://purl.org/dc/terms/isPartOf)
 
 #### Conditions Governing Reproduction and Use
 
